@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.project.bestprice</groupId>
+    <artifactId>best-price-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <inceptionYear>2020</inceptionYear>
+
+    <description>Price aggregator to compute the best price</description>
+    <developers>
+        <developer>
+            <id>vm1360</id>
+            <name>Vamsi Purna Mummaneni</name>
+            <email>mvamsipurna@outlook.com</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>cc0502</id>
+            <name>Charitha Chanamolu</name>
+            <email>charithachanamolu52@gmail.com</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <modules>
+        <module>best-price-rest</module>
+        <module>best-price-war</module>
+    </modules>
+
+    <distributionManagement>
+    </distributionManagement>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jira.component>5922</jira.component>
+        <repo.name>best-price</repo.name>
+        <jdk.version>1.8</jdk.version>
+        <jdk.target.version>1.8</jdk.target.version>
+        <!-- Plugin versions -->
+        <invoker.plugin.version>1.8</invoker.plugin.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+
+    </repositories>
+    <build>
+        <pluginManagement>
+            <plugins>
+
+            </plugins>
+        </pluginManagement>
+        <plugins>
+
+        </plugins>
+    </build>
+</project>
