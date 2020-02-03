@@ -3,15 +3,14 @@
          xmlns="http://java.sun.com/xml/ns/j2ee"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
          id="WebApp_ID" version="2.4">
-    <display-name>Assignments Aggregator</display-name>
-    <description>Assignments Aggregator</description>
-
+    <display-name>Best Price calculator</display-name>
+    <description>Best Price calculator</description>
     <servlet>
         <servlet-name>JerseyServlet</servlet-name>
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>javax.ws.rs.Application</param-name>
-            <param-value>com.cerner.assignments.aggregator.rest.application.RestApplication</param-value>
+            <param-value>com.bestprice.rest.application.RestApplication</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
