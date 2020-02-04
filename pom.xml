@@ -30,6 +30,9 @@
     <modules>
         <module>best-price-rest</module>
         <module>best-price-war</module>
+        <module>best-price-init</module>
+        <module>best-price-util</module>
+        <module>best-price-jdbc</module>
     </modules>
 
     <distributionManagement>
@@ -95,10 +98,42 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.project.bestprice</groupId>
+                <artifactId>best-price-util</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.project.bestprice</groupId>
+                <artifactId>best-price-init</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.glassfish.jersey.inject</groupId>
                 <artifactId>jersey-hk2</artifactId>
                 <version>${jersey.version}</version>
             </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject</groupId>
+                <artifactId>guice</artifactId>
+                <version>4.2.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject.extensions</groupId>
+                <artifactId>guice-assistedinject</artifactId>
+                <version>4.2.0</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>3.2.0</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
