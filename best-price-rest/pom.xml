@@ -30,6 +30,11 @@
             <artifactId>guava</artifactId>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.project.bestprice</groupId>
+            <artifactId>best-price-util</artifactId>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     <build>
 
