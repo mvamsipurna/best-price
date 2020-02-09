@@ -18,14 +18,6 @@
                 <role>developer</role>
             </roles>
         </developer>
-        <developer>
-            <id>cc0502</id>
-            <name>Charitha Chanamolu</name>
-            <email>charithachanamolu52@gmail.com</email>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </developer>
     </developers>
     <modules>
         <module>best-price-rest</module>
@@ -33,6 +25,7 @@
         <module>best-price-init</module>
         <module>best-price-util</module>
         <module>best-price-jdbc</module>
+        <module>best-price-model</module>
     </modules>
 
     <distributionManagement>
@@ -49,6 +42,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <jersey.version>2.29</jersey.version>
+        <jackson.version>2.10.0</jackson.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -108,6 +102,16 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.project.bestprice</groupId>
+                <artifactId>best-price-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.project.bestprice</groupId>
+                <artifactId>best-price-jdbc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.glassfish.jersey.inject</groupId>
                 <artifactId>jersey-hk2</artifactId>
                 <version>${jersey.version}</version>
@@ -133,7 +137,31 @@
                 <artifactId>jedis</artifactId>
                 <version>3.2.0</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.10.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>1.5.10</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
