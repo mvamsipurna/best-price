@@ -10,6 +10,6 @@ public class FetchItemFromDB {
     }
 
     public String fetch() {
-        return jedisInstance.lpop(itemName) != null ? jedisInstance.lpop(itemName) : null;
+        return jedisInstance.get(itemName);
     }
 }

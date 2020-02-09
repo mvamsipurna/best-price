@@ -16,31 +16,18 @@ public class PopulateData {
     private String itemName;
     private ItemByStoreAndPriceResponse itemByStoreAndPriceResponse;
 
+
     public PopulateData(ItemByStoreAndPriceResponse itemByStoreAndPriceResponse) {
         this.itemByStoreAndPriceResponse = itemByStoreAndPriceResponse;
     }
-    public int insertIntoCache() {
-       /* Map<String, List<StoreByPrice>> storeMap = new HashMap<>();
-        //        StoreInformation storeInformation = new StoreInformation.StoreInformationBuilder("Walmart", 848449).emailInfo("abc@gmail.com").build();
-        //        StoreByPrice storeByPrice = new StoreByPrice(storeInformation, 8);
-        //        List<StoreByPrice> storeByPrices = new ArrayList<>();
-        //        storeByPrices.add(storeByPrice);
-        //        storeMap.put(itemName, storeByPrices);
-        //        itemByStoreAndPriceResponse = new ItemByStoreAndPriceResponse(storeMap);
-        //        try {
-        //           return Serializer.serialize(itemByStoreAndPriceResponse);
-        //        } catch (JsonProcessingException e) {
-        //            e.printStackTrace();
-        //        }
-        //        //jedis.hmset(itemName, itemByStoreAndPriceResponse);*/
+    public String insertIntoCache() {
         for(String item : itemByStoreAndPriceResponse.getItemByStoreAndPrice().keySet()) {
             try {
-                jedis.lpush(item, Serializer.serialize(itemByStoreAndPriceResponse));
-                return 1;
+                return jedis.set(item, Serializer.serialize(itemByStoreAndPriceResponse.getItemByStoreAndPrice()));
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
             }
         }
-        return 0;
+        return null;
     }
 }

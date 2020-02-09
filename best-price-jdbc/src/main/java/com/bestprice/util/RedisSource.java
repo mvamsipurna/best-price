@@ -13,7 +13,7 @@ public class RedisSource {
         if(redisSourceInstance == null) {
             synchronized (RedisSource.class) {
                 if(redisSourceInstance == null) {
-                    redisSourceInstance = new Jedis();
+                    redisSourceInstance = new Jedis("127.0.0.1", 6379);
                 }
             }
         }
